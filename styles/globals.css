@@ -5,6 +5,8 @@
 	--acept-color: #7653FC;
 	--footer-color: #7653FC;
 	--secondary-button-color: #FFF;
+	--cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+	--border-color: #3B434E;
 }
 
 html,

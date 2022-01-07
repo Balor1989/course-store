@@ -1,5 +1,4 @@
-import { Htag } from "../components";
-import { Button } from "../components/button/Button";
+import { Htag,  Button } from "../components";
 
 export const App = () => {
     return (
