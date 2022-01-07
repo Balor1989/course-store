@@ -1,5 +1,13 @@
+:root {
+  --primary-text-color: #3b434e;
+  --secondary-text-color: #787d85;
+  --background-color: #f5f6f8;
+}
+
 html,
 body {
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
   padding: 0;
   margin: 0;
   font-family: 'Noto Sans Display', sans-serif;
