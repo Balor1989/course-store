@@ -1,6 +1,19 @@
-.buttonPrimary {
-  background-color: var(--acept-color);
+.button {
+	display: inline-block;
+	padding: 10px;
+	border: none;
+	margin-left: 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 1.36;
 }
-.buttonSecondary {
-  background-color: var(--secondary-button-color);
+
+.primary {
+	background-color: var(--acept-color);
+}
+
+.secondary {
+	background-color: var(--secondary-button-color);
+	outline: 1px solid;
 }
