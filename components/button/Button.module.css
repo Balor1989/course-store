@@ -1,0 +1,6 @@
+.buttonPrimary {
+  background-color: var(--acept-color);
+}
+.buttonSecondary {
+  background-color: var(--secondary-button-color);
+}
