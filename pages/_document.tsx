@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
+import React from 'react';
 
 class MyDocument extends Document {
 	
@@ -11,10 +12,10 @@ class MyDocument extends Document {
 		return (
 			<Html lang="ru">
 				<Head />
-				<body>
-					<Main />
-					<NextScript />
-				</body>
+					<body>
+						<Main />
+						<NextScript />
+					</body>
 			</Html>
 		);
 	}
