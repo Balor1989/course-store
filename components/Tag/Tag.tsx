@@ -5,7 +5,7 @@ import cn from 'classnames';
 
 export const Tag = ({ size = 'small', color = 'secondary', href, children, className, ...props }: TagProps): JSX.Element => {
     return (
-        <div className={cn(s.paragraph, className, {
+        <div className={cn(s.tag, className, {
             [s.small]: size === 'small',
             [s.medium]: size === 'medium',
             [s.primary]: color === 'primary',
