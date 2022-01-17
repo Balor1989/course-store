@@ -12,21 +12,38 @@
 
 .primary {
   background-color: var(--acept-color);
+  color: var(--secondary-button-color);
 }
-
+.primary svg {
+  fill: var(--primary-svg-color);
+  transition: fill 250ms var(--cubic-bezier);
+}
 .primary:hover {
   background: var(--secondary-button-color);
+  color: var(--primary-text-color);
   outline: 1px solid var(--border-color);
+}
+.primary:hover svg {
+  fill: var(--secondary-svg-color);
 }
 
 .secondary {
   background: var(--secondary-button-color);
+  color: var(--primary-text-color);
   outline: 1px solid var(--border-color);
 }
 
 .secondary:hover {
   background-color: var(--acept-color);
+  color: var(--secondary-button-color);
   outline: none;
+}
+.secondary svg {
+  fill: var(--secondary-svg-color);
+  transition: fill 250ms var(--cubic-bezier);
+}
+.secondary:hover svg {
+  fill: var(--primary-svg-color);
 }
 .arrow {
   margin-left: 12px;

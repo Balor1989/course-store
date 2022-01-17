@@ -7,6 +7,8 @@
   --secondary-button-color: #fff;
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --border-color: #3b434e;
+  --primary-svg-color: #ffffff;
+  --secondary-svg-color: #3b434e;
 }
 
 html,
