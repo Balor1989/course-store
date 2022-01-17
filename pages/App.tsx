@@ -1,4 +1,5 @@
-import { Htag, Button, Paragraph } from "../components";
+import { Htag, Button, Paragraph,Tag } from "../components";
+
 
 
 export const App = () => {
@@ -12,6 +13,8 @@ export const App = () => {
             <Paragraph size="small">fdgdfgdg</Paragraph>
             <Paragraph size="large">fdgdfgdg</Paragraph>
             <Paragraph>fdgdfgdg</Paragraph>
+            <Tag color="red">fffff</Tag>
+            <Tag color="primary" size="medium">fbdfgd</Tag>
         </>
     );
 };

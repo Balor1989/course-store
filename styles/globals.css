@@ -9,6 +9,13 @@
   --border-color: #3b434e;
   --primary-svg-color: #ffffff;
   --secondary-svg-color: #3b434e;
+  --tag-border-color: #ebebeb;
+  --tag-background-red: #de0000;
+  --tag-color-white: #ffffff;
+  --tag-background-gray: #b3c0d9;
+  --tag-background-green: #c8f8e4;
+  --tag-color-green: #1dc37e;
+  --tag-color-primary: #7653fc;
 }
 
 html,
