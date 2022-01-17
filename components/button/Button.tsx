@@ -4,7 +4,7 @@ import s from './Button.module.css';
 import { ButtonProps } from './Button.props';
 import cn from 'classnames';
 
-export const Button = ({ appearance, children, className, ...props }: ButtonProps): JSX.Element => {
+export const Button = ({ appearance, arrow='none', children, className, ...props }: ButtonProps): JSX.Element => {
     
     return (
         <button className={cn(s.button, className, {
@@ -12,6 +12,11 @@ export const Button = ({ appearance, children, className, ...props }: ButtonProp
             [s.secondary]: appearance === 'secondary'
         })}
         {...props}
-        >{children}</button>
+        >{children}
+            {arrow !== 'none' && <span className={cn(s.arrow, className, {
+                [s.right]: arrow === 'right',
+                [s.down]:arrow === 'down'
+         })}> стрелка </span> }        
+        </button>
     );
 };

@@ -28,3 +28,9 @@
   background-color: var(--acept-color);
   outline: none;
 }
+.arrow {
+  margin-left: 12px;
+}
+.down {
+  transform: rotate(90deg);
+}
