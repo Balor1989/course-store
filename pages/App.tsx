@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Htag, Button, Paragraph,Tag } from "../components";
+import { Htag, Button, Paragraph,Tag, Rating } from "../components";
 
 
 
@@ -18,6 +18,7 @@ export const App = () => {
             <Paragraph>fdgdfgdg</Paragraph>
             <Tag color="red">fffff</Tag>
             <Tag color="primary" size="medium">fbdfgd</Tag>
+            <Rating rating={4} />
         </>
     );
 };

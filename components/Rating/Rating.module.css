@@ -1,0 +1,7 @@
+.fill {
+  fill: var(--acept-color);
+}
+.star {
+  margin-right: 5px;
+  cursor: pointer;
+}
