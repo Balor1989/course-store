@@ -6,6 +6,7 @@ import { Htag, Button, Paragraph,Tag, Rating } from "../components";
 export const App = () => {
     const [title, setTitle] = useState<string>('Hello world!');
     const [counter, setCounter] = useState<number>(0);
+    const[rating,setRating]= useState<number>(2);
     return (
         <>
             <Htag tag='h1'> {title}</Htag>
@@ -18,7 +19,7 @@ export const App = () => {
             <Paragraph>fdgdfgdg</Paragraph>
             <Tag color="red">fffff</Tag>
             <Tag color="primary" size="medium">fbdfgd</Tag>
-            <Rating rating={2} isEditable={true} />
+            <Rating rating={rating} isEditable={true} setRating={setRating} />
         </>
     );
 };
