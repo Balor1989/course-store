@@ -8,18 +8,23 @@ export const Rating = ({ isEditable = false, rating, setRating, className, ...pr
     const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>));
 
     useEffect(() => {
-        conctructRating(rating);
+        constructRating(rating);
     },[rating]);
     
-    const conctructRating = (currentRating:number) => {
+    const constructRating = (currentRating:number) => {
         const updatedArray = ratingArray.map((ratingItem: JSX.Element, i: number) => {
             return (
                 < StarIcon className = { cn(s.star, {
                 [s.fill]:i < currentRating
-                })} />
+                })}
+                onMouseEnter={()=> changeDisplay(i+1)}
+                />
             );
         });
         setRatingArray(updatedArray);
+    };
+    const changeDisplay = (i: number) => {
+        constructRating(i);
     };
     
     return (
