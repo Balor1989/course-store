@@ -18,7 +18,7 @@ export const App = () => {
             <Paragraph>fdgdfgdg</Paragraph>
             <Tag color="red">fffff</Tag>
             <Tag color="primary" size="medium">fbdfgd</Tag>
-            <Rating rating={4} />
+            <Rating rating={2} isEditable={true} />
         </>
     );
 };

@@ -17,13 +17,17 @@ export const Rating = ({ isEditable = false, rating, setRating, className, ...pr
                 < StarIcon className = { cn(s.star, {
                 [s.fill]:i < currentRating
                 })}
-                onMouseEnter={()=> changeDisplay(i+1)}
+                    onMouseEnter={() => changeDisplay(i + 1)}
+                    onMouseLeave={()=> changeDisplay(rating)}
                 />
             );
         });
         setRatingArray(updatedArray);
     };
     const changeDisplay = (i: number) => {
+        if (!isEditable) {
+            return;
+        }
         constructRating(i);
     };
     
