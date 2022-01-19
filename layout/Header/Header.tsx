@@ -6,7 +6,7 @@ import s from './Sidebar.module.css';
 export const Header = ({ ...props }: HeaderProps): JSX.Element => {
     return (
         <header {...props}>
-            Sidebar
+            Header
         </header>
     );
 };

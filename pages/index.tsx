@@ -1,9 +1,27 @@
-import {App} from './App';
+import { useState } from "react";
+import { Htag, Button, Paragraph,Tag, Rating } from "../components";
+import { renderWithLayout } from "../layout/Layout";
 
 
-
-export default function Home(): JSX.Element {
-  return (
-      <App />
-  );
+function Home ():JSX.Element {
+    const [title] = useState<string>('Hello world!');
+    const [counter, setCounter] = useState<number>(0);
+    const[rating,setRating]= useState<number>(2);
+    return (
+        <>
+            <Htag tag='h1'> {title}</Htag>
+            <Htag tag='h2'> Hello!</Htag>
+            <Htag tag='h3'> Hello!</Htag>
+            <Button appearance="primary" onClick={() => setCounter(x => x + 1)}>Кнопка</Button>
+            <Button appearance="secondary" arrow="right" onClick={() => setCounter(x => x - 1)}>Кнопка</Button>
+            <Paragraph size="small">{counter}</Paragraph>
+            <Paragraph size="large">fdgdfgdg</Paragraph>
+            <Paragraph>fdgdfgdg</Paragraph>
+            <Tag color="red">fffff</Tag>
+            <Tag color="primary" size="medium">fbdfgd</Tag>
+            <Rating rating={rating} isEditable={true} setRating={setRating} />
+        </>
+    );
 }
+
+export default renderWithLayout(Home);

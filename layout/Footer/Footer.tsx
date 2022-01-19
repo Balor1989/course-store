@@ -7,7 +7,7 @@ import s from './Sidebar.module.css';
 export const Footer = ({ ...props }: FooterProps): JSX.Element => {
     return (
         <footer {...props}>
-            Sidebar
+            Footer
         </footer>
     );
 };
