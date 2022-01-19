@@ -26,7 +26,8 @@
 @media screen and (min-width: 768px) {
   .gridWrapper {
     grid-template-columns: auto 230px minmax(320px, 1200px) auto;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 1fr auto;
+    gap: 0 30px;
     grid-template-areas:
       '. sidebar main .'
       'footer footer footer footer';
