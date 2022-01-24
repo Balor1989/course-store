@@ -38,7 +38,7 @@ export const getStaticProps: GetStaticProps<CourseProps> = async({ params }: Get
 
     const { data: menu }: AxiosResponse<MenuItem[]> = await axios.post(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find', { firstCategory });
     const { data: page }: AxiosResponse<TopPageModel> = await axios.get(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/byAlias/' + params.alias);
-    const { data: products }: AxiosResponse<ProductModel[]> = await axios.post<ProductModel[]>(process.env.NEXT_PUBLIC_DOMAIN + '/api/product/find',{
+    const { data: products }: AxiosResponse<ProductModel[]> = await axios.post(process.env.NEXT_PUBLIC_DOMAIN + '/api/product/find',{
         category: page.category,
         limit: 7
     });
