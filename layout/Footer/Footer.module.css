@@ -17,5 +17,6 @@
   .footer {
     grid-template-columns: 1fr auto auto;
     gap: 0 40px;
+    justify-items: flex-start;
   }
 }
