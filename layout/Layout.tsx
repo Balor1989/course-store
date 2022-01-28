@@ -5,6 +5,7 @@ import { Footer } from "./Footer/Footer";
 import { Header } from "./Header/Header";
 import { LayoutProps } from "./Layout.props";
 import { Sidebar } from "./Sidebar/Sidebar";
+import { AppContextProvider, IntContext } from '../context/context';
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
     return (
@@ -19,12 +20,14 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
     );
 };
 
-export const renderWithLayout =<T extends Record<string, unknown>> (Component: FunctionComponent<T>) => {
+export const renderWithLayout =<T extends Record<string, unknown> & IntContext> (Component: FunctionComponent<T>) => {
     return function renderWithLayoutComponent(props: T): JSX.Element {
         return (
-            <Layout>
-                <Component {...props} />
-            </Layout>
+            <AppContextProvider menu={props.menu} firstCategory={props.firstCategory}>
+                <Layout>
+                    <Component {...props} />
+                </Layout>
+            </AppContextProvider>    
         );
     };
 };
