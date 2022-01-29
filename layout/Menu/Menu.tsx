@@ -25,7 +25,7 @@ export const Menu = (): JSX.Element => {
             <ul>
                 {firstLevelMenu.map(mainMenu => (
                     <li key={mainMenu.id}>
-                        <Link href={`${mainMenu.route}`}>
+                        <Link href={`/${mainMenu.route}`}>
                             <a>
                                 <div className={cn(s.firstElement, {
                                     [s.firstLevelActive]: mainMenu.id === firstCategory
@@ -43,38 +43,33 @@ export const Menu = (): JSX.Element => {
     };
      
     const buildSecondLevelMenu = (menuItem: FirstLevelMenuItem) => {
-        return (
-            <ul className={s.secondLevelBox}>
-                {menu.map(m => (
-                    <li key={m._id.secondCategory}>
-                        <div className={cn(s.secondLevel, {
-                            [s.secondLevelOpen]: m.isOpened
-                        })}>
-                            {m._id.secondCategory}
-                            <ul>
-                                {buildThirdLevelMenu(m.pages, menuItem.route)}
-                            </ul>
-                        </div>
-                    </li>
-                ))}
-            </ul>
-        );
+       return (
+			<div className={s.secondlevelBox}>
+				{menu.map(m => (
+					<div key={m._id.secondCategory}>
+						<div className={s.secondLevel}>{m._id.secondCategory}</div>
+						<div className={cn(s.secondLevel, {
+							[s.secondLevelOpened]: m.isOpened
+						})}>
+							{buildThirdLevelMenu(m.pages, menuItem.route)}
+						</div>
+					</div>
+				))}
+			</div>
+		);
     };
 
-    const buildThirdLevelMenu = (pages: PageItem[], route: string) => {
-
-        return (
-            pages.map(page => {
-                <Link href={`/${route}/${page.alias}`}>
-                <a className={cn(s.thirdLevel, {
-                    [s.active]: true
-                })}>
-                    {page.title}
-                    </a>
-                </Link>
-            })
-        );
-    };
+   const buildThirdLevelMenu = (pages: PageItem[], route: string) => {
+		return (
+			pages.map(page => (
+				<a key={page._id} href={`/${route}/${page.alias}`} className={cn(s.thirdLevel, {
+					[s.thirdLevelActive]: false
+				})}>
+					{page.category}
+				</a>
+			))
+		);
+	};
 
     return (
         <div className={s.menu}>

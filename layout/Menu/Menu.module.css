@@ -40,7 +40,7 @@
   fill: var(--acept-color);
 }
 
-.secondLevelBox {
+.secondlevelBox {
   margin-left: 10px;
   padding-left: 30px;
   border-left: 1px solid var(--menu-border-right);
@@ -57,7 +57,12 @@
   transition: color 300ms var(--cubic-bezier);
 }
 
+.secondLevel:last-child {
+  margin-bottom: 30px;
+}
+
 .thirdLevel {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.36;
