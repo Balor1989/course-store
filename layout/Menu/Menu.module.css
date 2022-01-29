@@ -1,0 +1,44 @@
+.menu {
+  margin-top: 20px;
+}
+
+.firstElement {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 24px 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.39;
+
+  color: var(--secondary-text-color);
+  transition: color 300ms var(--cubic-bezier);
+}
+
+.firstElement svg {
+  fill: var(--secondary-text-color);
+  transition: fill 300ms var(--cubic-bezier);
+}
+
+.firstElement:hover svg {
+  fill: var(--acept-color);
+}
+
+.firstElement:hover {
+  color: var(--acept-color);
+}
+
+.firstElementActive {
+  color: var(--acept-color);
+}
+
+.firstElementActive svg {
+  fill: var(--acept-color);
+}
+
+.secondLevel {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.36;
+}
