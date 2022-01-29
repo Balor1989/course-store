@@ -21,9 +21,9 @@ export const Menu = (): JSX.Element => {
 
     const buildFirstLevelMenu = () => {
         return (
-            <>
+            <ul>
                 {firstLevelMenu.map(mainMenu => (
-                    <div key={mainMenu.id}>
+                    <li key={mainMenu.id}>
                         <a href={`${mainMenu.route}`}>
                             <div className={cn(s.firstElement, {
                                 [s.firstLevelActive]: mainMenu.id === firstCategory
@@ -33,38 +33,37 @@ export const Menu = (): JSX.Element => {
                             </div>
                         </a>
                         {mainMenu.id === firstCategory && buildSecondLevelMenu(mainMenu)}
-                    </div>
+                    </li>
                 ))}
-            </>
+            </ul>
         );
     };
      
     const buildSecondLevelMenu = (menuItem: FirstLevelMenuItem) => {
         return (
-            <div>
+            <ul className={s.secondLevelBox}>
                 {menu.map(m => (
-                    <div key={m._id.secondCategory}>
-                        <div className={s.secondlevel}>
-                            {m._id.secondCategory}
+                    <li key={m._id.secondCategory}>
                             <div className={cn(s.secondLevel, {
                                 [s.secondLevelOpen]: m.isOpened
                             })}>
+                                {m._id.secondCategory}
                                 {buildThirdLevelMenu(m.pages, menuItem.route)}
                             </div>
-                        </div>
-                    </div>
+                    </li>
                 ))}
-            </div>
+            </ul>
         );
     };
 
     const buildThirdLevelMenu = (pages: PageItem[], route: string) => {
+        console.log(pages)
         return (
             pages.map(page => {
-                <a href={`/${route}/${page.alias}`} className={cn(s.thirdLevel, {
+                <a key={page._id} href={`/${route}`} className={cn(s.thirdLevel, {
                     [s.active]: true
                 })}>
-                    {page.category}
+                    {page}
                 </a>;
             })
         );

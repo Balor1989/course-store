@@ -25,11 +25,14 @@
   fill: var(--acept-color);
 }
 
-.firstElement:hover {
+.firstElement:hover,
+.secondLevel:hover,
+.thirdLevel:hover {
   color: var(--acept-color);
 }
 
-.firstElementActive {
+.firstElementActive,
+.secondLevelOpen {
   color: var(--acept-color);
 }
 
@@ -37,8 +40,29 @@
   fill: var(--acept-color);
 }
 
+.secondLevelBox {
+  margin-left: 10px;
+  padding-left: 30px;
+  border-left: 1px solid var(--menu-border-right);
+}
+
 .secondLevel {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.33;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: var(--secondary-text-color);
+  transition: color 300ms var(--cubic-bezier);
+}
+
+.thirdLevel {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.36;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: var(--secondary-text-color);
+  transition: color 300ms var(--cubic-bezier);
 }
