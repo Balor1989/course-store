@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import { useContext } from 'react';
-import { AppContext } from '../../context/context';
+import { AppContext } from '../../context/app.context';
 import s from './Menu.module.css';
 
 
