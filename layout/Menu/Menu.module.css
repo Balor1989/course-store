@@ -46,6 +46,13 @@
   border-left: 1px solid var(--menu-border-right);
 }
 
+.secondLevelBlock {
+  display: none;
+}
+.secondLevelBlockOpened {
+  display: block;
+}
+
 .secondLevel {
   font-weight: 300;
   font-size: 12px;
@@ -70,4 +77,8 @@
   cursor: pointer;
   color: var(--secondary-text-color);
   transition: color 300ms var(--cubic-bezier);
+}
+
+.thirdLevelActive {
+  color: var(--acept-color);
 }
