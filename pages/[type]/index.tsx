@@ -3,6 +3,7 @@ import axios, { AxiosResponse } from 'axios';
 import { MenuItem } from "../../interfaces/menu.interface";
 import { renderWithLayout } from "../../layout/Layout";
 import { firstLevelMenu } from "../../helpers/helpers";
+import { Menu } from "../../layout/Menu/Menu";
 
 
 
@@ -10,7 +11,7 @@ function Type(): JSX.Element {
 
     return (
         <>
-            type
+          Page
         </>
     );
 }

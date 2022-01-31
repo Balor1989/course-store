@@ -6,6 +6,9 @@ import { SidebarProps } from "./Sidebar.props";
 export const Sidebar = ({ ...props }: SidebarProps): JSX.Element => {
     return (
         <aside {...props}>
+            <form action="">
+                <input type="input" />
+            </form>
             <Menu />
         </aside>
     );
