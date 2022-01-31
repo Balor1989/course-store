@@ -27,14 +27,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
             .post(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find', { firstCategory: i.id });
         paths = paths.concat(menu.flatMap(m => m.pages.map(p=> `/${i.route}/${p.alias}`)));
     }
-   console.log(paths);
     return {
         paths,
         fallback: true
     };
 };
 
-export const getStaticProps: GetStaticProps<CourseProps> = async({ params }: GetStaticPropsContext<ParsedUrlQuery>) => {
+export const getStaticProps: GetStaticProps<CourseProps> = async ({ params }: GetStaticPropsContext<ParsedUrlQuery>) => {
     if (!params) {
         return {
             notFound: true
@@ -47,17 +46,24 @@ export const getStaticProps: GetStaticProps<CourseProps> = async({ params }: Get
             notFound: true
         };
     }
+    try {
     const { data: menu }: AxiosResponse<MenuItem[]> = await axios
         .post(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find', { firstCategory: firstCategoryItem.id });
     
+        if (menu.length === 0) {
+          return {
+            notFound: true
+        };
+     }
+
     const { data: page }: AxiosResponse<TopPageModel> = await axios
         .get(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/byAlias/' + params.alias);
     
     const { data: products }: AxiosResponse<ProductModel[]> = await axios
         .post(process.env.NEXT_PUBLIC_DOMAIN + '/api/product/find', {
-        category: page.category,
-        limit: 7
-    });
+            category: page.category,
+            limit: 7
+        });
     
     return {
         props: {
@@ -67,6 +73,11 @@ export const getStaticProps: GetStaticProps<CourseProps> = async({ params }: Get
             products
         }
     };
+    } catch {
+         return {
+            notFound: true
+        };
+    }
 };
 
 interface CourseProps extends Record<string, unknown> {
