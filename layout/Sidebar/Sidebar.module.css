@@ -1,0 +1,12 @@
+.sidebar {
+  display: grid;
+  padding-left: 35px;
+  gap: 20px;
+  padding-top: 35px;
+}
+
+.logoIcon {
+  margin-bottom: 10px;
+  max-width: 159px;
+  max-height: 43px;
+}
