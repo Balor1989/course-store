@@ -6,8 +6,28 @@ import ProductIcon from './menu-icons/suplies.svg';
 import { firstMenuImem } from '../interfaces/menu.interface';
 
 export const firstLevelMenu: firstMenuImem[] = [
-    { route: 'courses', name: 'Курсы', icon: <CourseIcon />, id: TopLevelCategory.Courses },
-    { route: 'services', name: 'Сервисы', icon: <ServiceIcon />, id: TopLevelCategory.Services },
-    { route: 'books', name: 'Книги', icon: <BookIcon />, id: TopLevelCategory.Books },
-    { route: 'products', name: 'Товары', icon: <ProductIcon />, id: TopLevelCategory.Products },
+  {
+    route: 'courses',
+    name: 'Курсы',
+    icon: <CourseIcon />,
+    id: TopLevelCategory.Courses,
+  },
+  {
+    route: 'services',
+    name: 'Сервисы',
+    icon: <ServiceIcon />,
+    id: TopLevelCategory.Services,
+  },
+  {
+    route: 'books',
+    name: 'Книги',
+    icon: <BookIcon />,
+    id: TopLevelCategory.Books,
+  },
+  {
+    route: 'products',
+    name: 'Товары',
+    icon: <ProductIcon />,
+    id: TopLevelCategory.Products,
+  },
 ];
