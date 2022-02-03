@@ -31,12 +31,12 @@
   color: var(--acept-color);
 }
 
-.firstElementActive,
+.firstLevelActive,
 .secondLevelOpen {
   color: var(--acept-color);
 }
 
-.firstElementActive svg {
+.firstLevelActive svg {
   fill: var(--acept-color);
 }
 
