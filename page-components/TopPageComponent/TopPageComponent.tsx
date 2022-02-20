@@ -28,7 +28,7 @@ export const TopPageComponent = ({
           </Tag>
         )}
       </div>
-      <GrcBox {...page.hh} />
+      {products && <GrcBox {...page.hh} />}
     </section>
   );
 };
