@@ -1,9 +1,37 @@
-.card {
-  background: var(--primary-card-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
-  border-radius: 5px;
+.hantBox {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 30px;
 }
 
-.gray {
-  background-color: var(--secondary-card-color);
+.count {
+  padding: 20px;
+  text-align: center;
+}
+
+.salaryBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding: 20px;
+  text-align: center;
+}
+.salaryCard:not(:last-child) {
+  border-right: 1px solid var(--tag-border-color);
+}
+
+.title {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 27px;
+
+  color: var(--primary-text-color);
+}
+.length {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 49px;
+
+  color: var(--acept-color);
 }
