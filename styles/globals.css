@@ -9,6 +9,8 @@
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --border-color: #3b434e;
   --primary-svg-color: #fff;
+  --primary-card-color: #fff;
+  --secondary-card-color: #f9f8ff;
   --secondary-svg-color: #3b434e;
   --tag-border-color: #ebebeb;
   --tag-background-red: #de0000;

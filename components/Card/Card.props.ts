@@ -2,6 +2,6 @@ import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
 
 export interface CardProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  color?: 'white' | 'blue';
+  color?: 'white' | 'gray';
   children: ReactNode;
 }

@@ -51,11 +51,7 @@ export const Menu = (): JSX.Element => {
     return (
       <div className={s.secondlevelBox}>
         {menu.map(m => {
-          if (
-            m.pages
-              .map(page => page.alias)
-              .includes(router.asPath.split('/')[2])
-          ) {
+          if (m.pages.map(page => page.alias).includes(router.asPath.split('/')[2])) {
             m.isOpened = true;
           }
           return (
@@ -82,7 +78,7 @@ export const Menu = (): JSX.Element => {
 
   const buildThirdLevelMenu = (pages: PageItem[], route: string) => {
     return pages.map(page => (
-      <Link href={`/${route}/${page.alias}`}>
+      <Link key={page._id} href={`/${route}/${page.alias}`}>
         <a
           key={page._id}
           className={cn(s.thirdLevel, {

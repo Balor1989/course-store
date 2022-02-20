@@ -1,5 +1,5 @@
 import { TopPageComponentProps } from './TopPageComponent.props';
-import { Htag, Tag } from '../../components';
+import { Htag, Tag, GrcBox } from '../../components';
 import s from './TopPageComponent.module.css';
 
 export const TopPageComponent = ({
@@ -28,7 +28,7 @@ export const TopPageComponent = ({
           </Tag>
         )}
       </div>
-      <div className={s.grc}></div>
+      <GrcBox {...page.hh} />
     </section>
   );
 };
