@@ -3,4 +3,7 @@
   grid-template-columns: auto 1fr auto;
   align-items: center;
   justify-items: left;
+  padding-top: 35px;
+  padding-right: 35px;
+  gap: 20px;
 }

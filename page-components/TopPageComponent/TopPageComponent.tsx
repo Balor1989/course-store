@@ -18,6 +18,7 @@ export const TopPageComponent = ({
         )}
         <p>Sort</p>
       </div>
+      <div>{products && products.map(product => <div key={product._id}>{product.title}</div>)}</div>
     </>
   );
 };

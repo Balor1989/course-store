@@ -2,8 +2,8 @@
   display: grid;
   grid-template-columns: minmax(320px, 768px);
   grid-template-rows: auto 1fr auto;
-  align-items: center;
-  justify-items: center;
+  /* align-items: center;
+  justify-items: center; */
   min-height: 100vh;
   grid-template-areas:
     'header'
