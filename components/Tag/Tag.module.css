@@ -1,43 +1,43 @@
 .tag {
-	display: inline-block;
-	box-sizing: border-box;
-	padding: 5px 10px;
-	margin-left: 5px;
-	border-radius: 20px;
-	line-height: 1;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  margin-left: 5px;
+  border-radius: 20px;
+  line-height: 1;
 }
 
 .small {
-	font-size: 12px;
+  font-size: 12px;
 }
 
 .medium {
-	font-size: 14px;
+  font-size: 14px;
 }
 
 .secondary {
-	border: 1px solid var(--tag-border-color);
+  border: 1px solid var(--tag-border-color);
 }
 
 .red {
-	background-color: var(--tag-background-red);
-	color: var(--tag-color-white);
-	font-weight: 700;
+  background-color: var(--tag-background-red);
+  color: var(--tag-color-white);
+  font-weight: 700;
 }
 
-.grey {
-	background-color: var(--tag-background-gray);
-	color: var(--tag-color-white);
-	font-weight: 700;
+.gray {
+  background-color: var(--tag-background-gray);
+  color: var(--tag-color-white);
+  font-weight: 700;
 }
 
 .green {
-	background-color: var(--tag-background-green);
-	color: var(--tag-color-green);
-	font-weight: 700;
+  background-color: var(--tag-background-green);
+  color: var(--tag-color-green);
+  font-weight: 700;
 }
 
 .primary {
-	border: 1px solid var(--tag-color-primary);
-	color: var(--tag-color-primary);
+  border: 1px solid var(--tag-color-primary);
+  color: var(--tag-color-primary);
 }
