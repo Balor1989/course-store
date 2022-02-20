@@ -8,7 +8,7 @@ export const TopPageComponent = ({
   firstCategory,
 }: TopPageComponentProps): JSX.Element => {
   return (
-    <>
+    <section className={s.topPageWrapper}>
       <div className={s.pageComponentTitleBox}>
         <Htag tag="h1">{page.title}</Htag>
         {products && (
@@ -19,6 +19,6 @@ export const TopPageComponent = ({
         <p>Sort</p>
       </div>
       <div>{products && products.map(product => <div key={product._id}>{product.title}</div>)}</div>
-    </>
+    </section>
   );
 };

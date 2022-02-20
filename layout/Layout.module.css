@@ -23,12 +23,12 @@
 
 @media screen and (min-width: 768px) {
   .gridWrapper {
-    grid-template-columns: 230px minmax(320px, 1200px);
+    grid-template-columns: 230px minmax(320px, 1200px) auto;
     grid-template-rows: 1fr auto;
     gap: 0 30px;
     grid-template-areas:
-      'sidebar main '
-      ' footer footer';
+      'sidebar  main   main'
+      ' footer footer  footer';
   }
   .header {
     display: none;
