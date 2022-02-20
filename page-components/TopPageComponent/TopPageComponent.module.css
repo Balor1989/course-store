@@ -2,12 +2,24 @@
   padding-top: 35px;
   padding-right: 35px;
 }
+@media screen and (max-width: 767px) {
+  .topPageWrapper {
+    padding: 0;
+  }
+}
 
 .pageComponentTitleBox {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  align-items: center;
+  align-items: baseline;
   justify-items: left;
+  gap: 20px;
+}
 
+.grcTitle {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  justify-items: left;
   gap: 20px;
 }

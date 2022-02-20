@@ -2,8 +2,7 @@
   display: grid;
   grid-template-columns: minmax(320px, 768px);
   grid-template-rows: auto 1fr auto;
-  /* align-items: center;
-  justify-items: center; */
+  justify-items: center;
   min-height: 100vh;
   grid-template-areas:
     'header'
@@ -26,6 +25,7 @@
     grid-template-columns: 230px minmax(320px, 1200px) auto;
     grid-template-rows: 1fr auto;
     gap: 0 30px;
+    justify-items: normal;
     grid-template-areas:
       'sidebar  main   main'
       ' footer footer  footer';

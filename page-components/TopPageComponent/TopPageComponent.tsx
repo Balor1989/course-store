@@ -19,6 +19,16 @@ export const TopPageComponent = ({
         <p>Sort</p>
       </div>
       <div>{products && products.map(product => <div key={product._id}>{product.title}</div>)}</div>
+
+      <div className={s.grcTitle}>
+        <Htag tag="h2">Вакансии - {page.category}</Htag>
+        {products && (
+          <Tag color="red" size="medium">
+            grc
+          </Tag>
+        )}
+      </div>
+      <div className={s.grc}></div>
     </section>
   );
 };
