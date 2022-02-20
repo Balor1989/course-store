@@ -13,29 +13,27 @@
 .header {
   grid-area: header;
 }
-.sidebar {
-  grid-area: sidebar;
-  display: none;
-}
+
 .main {
   grid-area: main;
 }
 .footer {
   grid-area: footer;
 }
+
 @media screen and (min-width: 768px) {
   .gridWrapper {
-    grid-template-columns: auto 230px minmax(320px, 1200px) auto;
+    grid-template-columns: 230px minmax(320px, 1200px);
     grid-template-rows: 1fr auto;
     gap: 0 30px;
     grid-template-areas:
-      '. sidebar main .'
-      'footer footer footer footer';
+      'sidebar main '
+      ' footer footer';
   }
   .header {
     display: none;
   }
   .sidebar {
-    display: block;
+    grid-area: sidebar;
   }
 }

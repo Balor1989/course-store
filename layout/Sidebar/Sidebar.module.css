@@ -1,8 +1,13 @@
-.sidebar {
+.sidebarBox {
   display: grid;
   padding-left: 35px;
   gap: 20px;
   padding-top: 35px;
+}
+@media screen and (max-width: 767px) {
+  .sidebarBox {
+    display: none;
+  }
 }
 
 .logoIcon {

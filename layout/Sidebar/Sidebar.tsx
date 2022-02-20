@@ -6,7 +6,7 @@ import LogoIcon from '../logo.svg';
 
 export const Sidebar = ({ className, ...props }: SidebarProps): JSX.Element => {
   return (
-    <aside className={cn(s.sidebar)} {...props}>
+    <aside className={cn(s.sidebarBox)} {...props}>
       <LogoIcon className={s.logoIcon} />
       <form action="">
         <input type="input" />

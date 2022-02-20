@@ -1,5 +1,6 @@
 import { TopPageComponentProps } from './TopPageComponent.props';
 import { Htag, Tag } from '../../components';
+import s from './TopPageComponent.module.css';
 
 export const TopPageComponent = ({
   page,
@@ -8,11 +9,15 @@ export const TopPageComponent = ({
 }: TopPageComponentProps): JSX.Element => {
   return (
     <>
-      <div>
+      <div className={s.pageComponentTitleBox}>
         <Htag tag="h1">{page.title}</Htag>
-        {products && <Tag color="gray">{products.length}</Tag>}
+        {products && (
+          <Tag color="gray" size="medium">
+            {products.length}
+          </Tag>
+        )}
+        <p>Sort</p>
       </div>
-      <p>{products && products.length}</p>
     </>
   );
 };
