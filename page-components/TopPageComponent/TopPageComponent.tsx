@@ -2,6 +2,7 @@ import { TopPageComponentProps } from './TopPageComponent.props';
 import { Htag, Tag, GrcBox } from '../../components';
 import s from './TopPageComponent.module.css';
 import { TopLevelCategory } from '../../interfaces/page.interface';
+import { Advantages } from '../../components/Advantages/Advantages';
 
 export const TopPageComponent = ({
   page,
@@ -30,6 +31,7 @@ export const TopPageComponent = ({
         )}
       </div>
       {firstCategory === TopLevelCategory.Courses && page.hh && <GrcBox {...page.hh} />}
+      {page.advantages && page.advantages.length > 0 && <Advantages advantages={page.advantages} />}
     </section>
   );
 };

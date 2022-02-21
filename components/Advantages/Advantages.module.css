@@ -1,0 +1,65 @@
+@media screen and (min-width: 1280px) {
+  .hantBox {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .hantBox {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.countBox {
+  padding: 20px;
+  text-align: center;
+}
+
+.salaryBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding: 20px;
+  text-align: center;
+}
+.salaryCard:not(:last-child) {
+  border-right: 1px solid var(--tag-border-color);
+}
+
+.title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.35;
+
+  color: var(--primary-text-color);
+}
+.length {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.35;
+
+  color: var(--acept-color);
+}
+
+.salaryValue {
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.35;
+  color: var(--primary-text-color);
+}
+.salaryRate {
+  display: grid;
+  grid-template-columns: repeat(3, 20px);
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.iconFill circle {
+  fill: var(--rate-color);
+}
