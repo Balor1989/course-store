@@ -4,6 +4,7 @@
   grid-template-rows: auto 1fr auto;
   justify-items: center;
   min-height: 100vh;
+
   grid-template-areas:
     'header'
     'main'
@@ -22,10 +23,11 @@
 
 @media screen and (min-width: 768px) {
   .gridWrapper {
-    grid-template-columns: 230px minmax(320px, 1200px) auto;
+    grid-template-columns: 230px auto minmax(320px, 1200px);
     grid-template-rows: 1fr auto;
-    gap: 0 30px;
-    justify-items: normal;
+    gap: 40px 30px;
+    margin-right: auto;
+    margin-left: auto;
     grid-template-areas:
       'sidebar  main   main'
       ' footer footer  footer';
@@ -36,4 +38,7 @@
   .sidebar {
     grid-area: sidebar;
   }
+}
+.mainWrapper {
+  padding: 40px 30px;
 }

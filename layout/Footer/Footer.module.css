@@ -3,7 +3,7 @@
   grid-template-columns: 1fr;
   gap: 20px 0;
   background-color: var(--acept-color);
-  width: 100vw;
+  width: 100%;
   padding: 25px 30px;
   justify-items: center;
 }

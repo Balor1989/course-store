@@ -32,6 +32,13 @@ export const TopPageComponent = ({
       </div>
       {firstCategory === TopLevelCategory.Courses && page.hh && <GrcBox {...page.hh} />}
       {page.advantages && page.advantages.length > 0 && <Advantages advantages={page.advantages} />}
+      {page.seoText && <p>{page.seoText}</p>}
+      <Htag tag="h2">Получаемые навыки</Htag>
+      {page.tags.map(tag => (
+        <Tag key={tag} color="primary">
+          {tag}
+        </Tag>
+      ))}
     </section>
   );
 };

@@ -18,9 +18,7 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
   );
 };
 
-export const renderWithLayout = <
-  T extends Record<string, unknown> & ContextInterface,
->(
+export const renderWithLayout = <T extends Record<string, unknown> & ContextInterface>(
   Component: FunctionComponent<T>,
 ) => {
   return function renderWithLayoutComponent(props: T): JSX.Element {
