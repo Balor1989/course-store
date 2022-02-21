@@ -1,6 +1,4 @@
 .sidebarBox {
-  display: grid;
-  gap: 20px;
 }
 @media screen and (max-width: 767px) {
   .sidebarBox {
@@ -12,4 +10,7 @@
   margin-bottom: 10px;
   max-width: 159px;
   max-height: 43px;
+}
+.form {
+  max-height: inherit;
 }

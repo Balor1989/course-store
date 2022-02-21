@@ -3,6 +3,7 @@
   grid-template-columns: minmax(320px, 768px);
   grid-template-rows: auto 1fr auto;
   justify-items: center;
+  padding: 40px 40px 0 40px;
   min-height: 100vh;
 
   grid-template-areas:
@@ -23,9 +24,11 @@
 
 @media screen and (min-width: 768px) {
   .gridWrapper {
+    display: grid;
     grid-template-columns: 230px auto minmax(320px, 1200px);
     grid-template-rows: 1fr auto;
     gap: 40px 30px;
+    padding: 40px 40px 0 40px;
     margin-right: auto;
     margin-left: auto;
     grid-template-areas:

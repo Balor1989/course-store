@@ -8,7 +8,7 @@ export const Sidebar = ({ className, ...props }: SidebarProps): JSX.Element => {
   return (
     <aside className={cn(s.sidebarBox)} {...props}>
       <LogoIcon className={s.logoIcon} />
-      <form action="">
+      <form action="" className={s.form}>
         <input type="input" />
       </form>
       <Menu />
