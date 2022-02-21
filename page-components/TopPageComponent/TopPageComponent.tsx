@@ -3,6 +3,7 @@ import { Htag, Tag, GrcBox } from '../../components';
 import s from './TopPageComponent.module.css';
 import { TopLevelCategory } from '../../interfaces/page.interface';
 import { Advantages } from '../../components/Advantages/Advantages';
+import parse from 'html-react-parser';
 
 export const TopPageComponent = ({
   page,
@@ -32,8 +33,8 @@ export const TopPageComponent = ({
       </div>
       {firstCategory === TopLevelCategory.Courses && page.hh && <GrcBox {...page.hh} />}
       {page.advantages && page.advantages.length > 0 && <Advantages advantages={page.advantages} />}
-      {page.seoText && <p>{page.seoText}</p>}
-      <Htag tag="h2">Получаемые навыки</Htag>
+      {page.seoText && <div className={s.seoText}>{parse(page.seoText)}</div>}
+      <Htag tag="h2">{'Получемые навыки'}</Htag>
       {page.tags.map(tag => (
         <Tag key={tag} color="primary">
           {tag}

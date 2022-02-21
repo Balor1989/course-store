@@ -1,23 +1,40 @@
 .topPageWrapper {
 }
+
 @media screen and (max-width: 767px) {
-  .topPageWrapper {
-    padding: 0;
-  }
+	.topPageWrapper {
+		padding: 0;
+	}
 }
 
 .pageComponentTitleBox {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: baseline;
-  justify-items: left;
-  gap: 20px;
+	display: grid;
+	align-items: baseline;
+	gap: 20px;
+	grid-template-columns: auto 1fr auto;
+	justify-items: left;
 }
 
 .grcTitle {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: baseline;
-  justify-items: left;
-  gap: 20px;
+	display: grid;
+	align-items: baseline;
+	gap: 20px;
+	grid-template-columns: auto 1fr;
+	justify-items: left;
+}
+
+.seoText {
+	margin-bottom: 30px;
+	color: var(--primary-text-color);
+	font-size: 18px;
+	line-height: 1.35;
+}
+
+.seoText h2 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	color: var(--primary-text-color);
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 1.35;
 }

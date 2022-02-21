@@ -1,84 +1,84 @@
 .menu {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 
 .firstElement {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 24px 1fr;
-  gap: 15px;
-  margin-bottom: 20px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.39;
-
-  color: var(--secondary-text-color);
-  transition: color 300ms var(--cubic-bezier);
+	display: grid;
+	align-items: center;
+	margin-bottom: 20px;
+	color: var(--secondary-text-color);
+	font-size: 18px;
+	font-weight: 500;
+	gap: 15px;
+	grid-template-columns: 24px 1fr;
+	line-height: 1.39;
+	transition: color 300ms var(--cubic-bezier);
 }
 
 .firstElement svg {
-  fill: var(--secondary-text-color);
-  transition: fill 300ms var(--cubic-bezier);
+	fill: var(--secondary-text-color);
+	transition: fill 300ms var(--cubic-bezier);
 }
 
 .firstElement:hover svg {
-  fill: var(--acept-color);
+	fill: var(--acept-color);
 }
 
 .firstElement:hover,
 .secondLevel:hover,
 .thirdLevel:hover {
-  color: var(--acept-color);
+	color: var(--acept-color);
 }
 
 .firstLevelActive,
 .secondLevelOpen {
-  color: var(--acept-color);
+	color: var(--acept-color);
 }
 
 .firstLevelActive svg {
-  fill: var(--acept-color);
+	fill: var(--acept-color);
 }
 
 .secondlevelBox {
-  margin-left: 10px;
-  padding-left: 30px;
-  border-left: 1px solid var(--menu-border-right);
+	padding-left: 30px;
+	border-left: 1px solid var(--menu-border-right);
+	margin-left: 10px;
 }
 
 .secondLevelBlock {
-  display: none;
+	display: none;
 }
+
 .secondLevelBlockOpened {
-  display: block;
+	display: block;
 }
 
 .secondLevel {
-  font-weight: 300;
-  font-size: 12px;
-  line-height: 1.33;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  cursor: pointer;
-  color: var(--secondary-text-color);
-  transition: color 300ms var(--cubic-bezier);
+	margin-bottom: 10px;
+	color: var(--secondary-text-color);
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 1.33;
+	text-transform: uppercase;
+	transition: color 300ms var(--cubic-bezier);
 }
 
 .secondLevel:last-child {
-  margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .thirdLevel {
-  display: block;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.36;
-  margin-bottom: 10px;
-  cursor: pointer;
-  color: var(--secondary-text-color);
-  transition: color 300ms var(--cubic-bezier);
+	display: block;
+	margin-bottom: 10px;
+	color: var(--secondary-text-color);
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.36;
+	transition: color 300ms var(--cubic-bezier);
 }
 
 .thirdLevelActive {
-  color: var(--acept-color);
+	color: var(--acept-color);
 }

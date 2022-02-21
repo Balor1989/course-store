@@ -1,16 +1,18 @@
 .sidebarBox {
 }
+
 @media screen and (max-width: 767px) {
-  .sidebarBox {
-    display: none;
-  }
+	.sidebarBox {
+		display: none;
+	}
 }
 
 .logoIcon {
-  margin-bottom: 10px;
-  max-width: 159px;
-  max-height: 43px;
+	max-width: 159px;
+	max-height: 43px;
+	margin-bottom: 10px;
 }
+
 .form {
-  max-height: inherit;
+	max-height: inherit;
 }

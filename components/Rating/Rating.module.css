@@ -1,9 +1,11 @@
 .fill svg {
-  fill: var(--acept-color);
+	fill: var(--acept-color);
 }
+
 .editable {
-  cursor: pointer;
+	cursor: pointer;
 }
+
 .star svg {
-  margin-right: 5px;
+	margin-right: 5px;
 }
