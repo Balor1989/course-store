@@ -1,16 +1,15 @@
-.hantBox {
-  grid-template-columns: 1fr 3fr;
-  gap: 30px;
+@media screen and (min-width: 1280px) {
+  .hantBox {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 30px;
+  }
 }
-@media screen and(max-width: 1279px) {
+@media screen and (max-width: 1279px) {
   .hantBox {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    row-gap: 20px;
-  }
-  .countBox {
-    margin-bottom: 20px;
+    gap: 30px;
   }
 }
 
