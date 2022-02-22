@@ -6,12 +6,22 @@ import { Advantages } from '../../components/Advantages/Advantages';
 import parse from 'html-react-parser';
 import { Sort } from '../../components/Sort/Sort';
 import { SortEnum } from '../../components/Sort/Sort.props';
+import { useReducer } from 'react';
+import { sortReducer } from '../../components/Sort/sort.reducer';
 
 export const TopPageComponent = ({
   page,
   products,
   firstCategory,
 }: TopPageComponentProps): JSX.Element => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(sortReducer, {
+    products,
+    sort: SortEnum.Rating,
+  });
+  const setSort = (sort: SortEnum) => {
+    dispatchSort({ type: sort });
+  };
   return (
     <section className={s.topPageWrapper}>
       <div className={s.pageComponentTitleBox}>
@@ -21,7 +31,7 @@ export const TopPageComponent = ({
             {products.length}
           </Tag>
         )}
-        <Sort sort={SortEnum.Rating} />
+        <Sort sort={sort} setSort={setSort} />
       </div>
       <div>{products && products.map(product => <div key={product._id}>{product.title}</div>)}</div>
 
