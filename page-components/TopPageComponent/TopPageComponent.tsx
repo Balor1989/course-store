@@ -4,6 +4,7 @@ import s from './TopPageComponent.module.css';
 import { TopLevelCategory } from '../../interfaces/page.interface';
 import { Advantages } from '../../components/Advantages/Advantages';
 import parse from 'html-react-parser';
+import { Sort } from '../../components/Sort/Sort';
 
 export const TopPageComponent = ({
   page,
@@ -19,7 +20,7 @@ export const TopPageComponent = ({
             {products.length}
           </Tag>
         )}
-        <p>Sort</p>
+        <Sort />
       </div>
       <div>{products && products.map(product => <div key={product._id}>{product.title}</div>)}</div>
 

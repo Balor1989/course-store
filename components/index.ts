@@ -6,3 +6,4 @@ export * from './Rating/Rating';
 export * from './GrcBox/GrcBox';
 export * from './Card/Card';
 export * from './Advantages/Advantages';
+export * from './Sort/Sort';
