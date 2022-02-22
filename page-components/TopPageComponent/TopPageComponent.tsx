@@ -5,6 +5,7 @@ import { TopLevelCategory } from '../../interfaces/page.interface';
 import { Advantages } from '../../components/Advantages/Advantages';
 import parse from 'html-react-parser';
 import { Sort } from '../../components/Sort/Sort';
+import { SortEnum } from '../../components/Sort/Sort.props';
 
 export const TopPageComponent = ({
   page,
@@ -20,7 +21,7 @@ export const TopPageComponent = ({
             {products.length}
           </Tag>
         )}
-        <Sort />
+        <Sort sort={SortEnum.Rating} />
       </div>
       <div>{products && products.map(product => <div key={product._id}>{product.title}</div>)}</div>
 

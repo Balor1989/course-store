@@ -1,0 +1,24 @@
+.sortBox {
+  display: flex;
+}
+.sortBy {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.sortBy:first-child {
+  margin-right: 10px;
+}
+
+.sortIcon {
+  display: none;
+}
+.active {
+  font-weight: 500;
+  color: var(--acept-color);
+}
+
+.active .sortIcon {
+  display: block;
+  margin-right: 5px;
+}
