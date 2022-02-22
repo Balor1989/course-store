@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { GetStaticProps } from 'next';
-import { Htag, Button, Paragraph, Tag, Rating } from '../components';
+import { Htag, Button, Paragraph, Tag, Rating, Input } from '../components';
 import { renderWithLayout } from '../layout/Layout';
 import axios, { AxiosResponse } from 'axios';
 import { MenuItem } from '../interfaces/menu.interface';
@@ -17,11 +17,7 @@ function Home({ menu }: HomeProps): JSX.Element {
       <Button appearance="primary" onClick={() => setCounter(x => x + 1)}>
         Кнопка
       </Button>
-      <Button
-        appearance="secondary"
-        arrow="right"
-        onClick={() => setCounter(x => x - 1)}
-      >
+      <Button appearance="secondary" arrow="right" onClick={() => setCounter(x => x - 1)}>
         Кнопка
       </Button>
       <Paragraph size="small">{counter}</Paragraph>
@@ -31,6 +27,8 @@ function Home({ menu }: HomeProps): JSX.Element {
       <Tag color="primary" size="medium">
         fbdfgd
       </Tag>
+      <Input placeholder={'test'} />
+
       <Rating rating={rating} isEditable={true} setRating={setRating} />
       <ul>
         {menu.map(m => (

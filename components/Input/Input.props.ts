@@ -1,6 +1,4 @@
-import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
+import { DetailedHTMLProps, InputHTMLAttributes } from 'react';
 
 export interface InputProps
-  extends DetailedHTMLProps<HTMLAttributes<HTMLInputElement>, HTMLInputElement> {
-  children: ReactNode;
-}
+  extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {}
