@@ -1,60 +1,59 @@
 .button {
-	display: inline-block;
-	padding: 8px 12px;
-	border: none;
-	margin-left: 20px;
-	border-radius: 5px;
-	cursor: pointer;
-	font-size: 14px;
-	line-height: 1.36;
-	transition: all 250ms var(--cubic-bezier);
+  display: inline-block;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.36;
+  transition: all 250ms var(--cubic-bezier);
 }
 
 .primary {
-	background-color: var(--acept-color);
-	color: var(--secondary-button-color);
+  background-color: var(--acept-color);
+  color: var(--secondary-button-color);
 }
 
 .primary svg {
-	fill: var(--primary-svg-color);
-	transition: fill 250ms var(--cubic-bezier);
+  fill: var(--primary-svg-color);
+  transition: fill 250ms var(--cubic-bezier);
 }
 
 .primary:hover {
-	background: var(--secondary-button-color);
-	color: var(--primary-text-color);
-	outline: 1px solid var(--border-color);
+  background: var(--secondary-button-color);
+  color: var(--primary-text-color);
+  outline: 1px solid var(--border-color);
 }
 
 .primary:hover svg {
-	fill: var(--secondary-svg-color);
+  fill: var(--secondary-svg-color);
 }
 
 .secondary {
-	background: var(--secondary-button-color);
-	color: var(--primary-text-color);
-	outline: 1px solid var(--border-color);
+  background: var(--secondary-button-color);
+  color: var(--primary-text-color);
+  outline: 1px solid var(--border-color);
 }
 
 .secondary:hover {
-	background-color: var(--acept-color);
-	color: var(--secondary-button-color);
-	outline: none;
+  background-color: var(--acept-color);
+  color: var(--secondary-button-color);
+  outline: none;
 }
 
 .secondary svg {
-	fill: var(--secondary-svg-color);
-	transition: fill 250ms var(--cubic-bezier);
+  fill: var(--secondary-svg-color);
+  transition: fill 250ms var(--cubic-bezier);
 }
 
 .secondary:hover svg {
-	fill: var(--primary-svg-color);
+  fill: var(--primary-svg-color);
 }
 
 .arrow {
-	margin-left: 12px;
+  margin-left: 12px;
 }
 
 .down {
-	transform: rotate(90deg);
+  transform: rotate(90deg);
 }

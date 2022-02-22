@@ -1,0 +1,26 @@
+.search {
+  position: relative;
+  display: flex;
+}
+
+.searchButton {
+  position: absolute;
+  left: 200px;
+  top: 2px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+  transition: fill 300ms ease;
+}
+
+.icon:hover {
+  fill: var(--secondary-svg-color);
+}

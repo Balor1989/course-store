@@ -3,14 +3,14 @@ import { Menu } from '../Menu/Menu';
 import s from './Sidebar.module.css';
 import { SidebarProps } from './Sidebar.props';
 import LogoIcon from '../logo.svg';
-import { Input } from '../../components/Input/Input';
+import { Search } from '../../components';
 
 export const Sidebar = ({ className, ...props }: SidebarProps): JSX.Element => {
   return (
     <aside className={cn(s.sidebarBox)} {...props}>
       <LogoIcon className={s.logoIcon} />
       <form action="" className={s.form}>
-        <Input placeholder={'test'} />
+        <Search />
       </form>
       <Menu />
     </aside>
